@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="banner flex-center">
+        <h1 class="title">twitch TV</h1>
+    </nav>
+    <main>
+        <div class="menu flex-center">
+            <div class="btn all btn-active" data-chstate="all">ALL</div>
+            <div class="btn on" data-chstate="offline">ONLINE</div>
+            <div class="btn off" data-chstate="online">OFFLINE</div>
+        </div>
+        <div id="results" class="content"></div>
+    </main>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type='text/javascript' src="main.js"></script>
+
+</html>
