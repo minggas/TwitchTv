@@ -37,15 +37,18 @@ function btnToggle() {
 ##################################################################### 
 */
 
-function getChannelData(end){
+function getChannelData(end) {
     $.getJSON(end, response => renderData(response));
 }
 
 (function getData(user) {
     users.forEach(user => {
         $.getJSON('https://wind-bow.gomix.me/twitch-api/streams/' + user + '?callback=?', response => {
-            response.stream?renderData(response):getChannelData(`https://wind-bow.gomix.me/twitch-api/channels/${user}?callback=?`);
-        
+            if (response.stream) {
+                renderData(response);
+            } else {
+                getChannelData(`https://wind-bow.gomix.me/twitch-api/channels/${user}?callback=?`);
+            }
         });
     });
 })();
